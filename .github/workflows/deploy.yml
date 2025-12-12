@@ -9,10 +9,6 @@ on:
   # Manually trigger deployment
   workflow_dispatch:
 
-# 统一版本号，后续只需改这里
-env:
-  RUSTPRESS_VERSION: "0.1.12"
-
 jobs:
   docs:
     runs-on: ubuntu-latest
@@ -30,14 +26,6 @@ jobs:
       - name: Cache cargo
         uses: Swatinem/rust-cache@v2
 
-      # 缓存 rustpress 二进制，命中后跳过安装
-      - name: Cache rustpress binary
-        id: cache-rustpress
-        uses: actions/cache@v3
-        with:
-          path: ~/.cargo/bin/rustpress
-          key: rustpress-bin-${{ runner.os }}-${{ env.RUSTPRESS_VERSION }}
-
       # 可选：缓存 crates 索引与源码，加速首次安装或版本升级
       - name: Cache cargo registry
         uses: actions/cache@v3
@@ -47,10 +35,9 @@ jobs:
             ~/.cargo/git
           key: cargo-registry-${{ runner.os }}-stable
 
-      # 仅在未命中二进制缓存时安装固定版本的 RustPress
-      - name: Install RustPress (if missing)
-        if: steps.cache-rustpress.outputs.cache-hit != 'true'
-        run: cargo install rustpress --version ${{ env.RUSTPRESS_VERSION }} --locked
+      # 安装最新版本的 RustPress（每次都会检查并安装最新版本）
+      - name: Install RustPress
+        run: cargo install rustpress --locked
 
       - name: Verify RustPress
         run: rustpress -V
