@@ -20,7 +20,7 @@ location = "北京, 中国"
 website = "https://yishulun.com"
 email = "9830131@qq.com"
 paypal_qrcode = "/assets/paypal_qrcode.png"
-paypal_link = "https://www.paypal.com/paypalme/jinshimanong/9.9"
+paypal_link = "https://paypal.me/liyi6688/9.9"
 
 # 社交链接
 [social]
