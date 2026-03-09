@@ -130,7 +130,7 @@ url = "/friends.html"
 weight = 6
 
 [[menu.main]]
-name = "项目"w
+name = "项目"
 url = "/projects.html"
 weight = 7
 
