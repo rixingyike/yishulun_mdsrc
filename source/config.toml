@@ -120,19 +120,24 @@ url = "/tags.html"
 weight = 4
 
 [[menu.main]]
-name = "友链"
-url = "/friends.html"
+name = "文档"
+url = "/docs.html"
 weight = 5
 
 [[menu.main]]
-name = "项目"
-url = "/projects.html"
+name = "友链"
+url = "/friends.html"
 weight = 6
+
+[[menu.main]]
+name = "项目"w
+url = "/projects.html"
+weight = 7
 
 [[menu.main]]
 name = "关于"
 url = "/about.html"
-weight = 6
+weight = 8
 
 [taxonomies]
 category = "categories"
