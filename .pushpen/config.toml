@@ -1,0 +1,24 @@
+[platforms]
+
+[platforms.cnblogs]
+blog_id = "sban"
+username = "CoderLIYI"
+api_key = "4D9D9E29196E8AF96C6D3BBDD3C0D4BD43E822C13B308047E350CCFC27C2DEC3"
+
+[platforms.mowen]
+api_key = "Ay4zqR828df4FtDYhEJcoGNf3swLsMKf"
+
+[platforms.wechat]
+app_id = "wxf888fd237861dd4c"
+app_secret = "9583acb81aafd1ca8b27ca95dcc26187"
+
+[platforms.x]
+api_key = "GolFptSZWVjpvjXGTVYdB5SKY"
+api_secret = "MeNtFePhTtPugohWdc76xGrUun9SAE4fbIA6u31Xwu4TZr4Yu4"
+access_token = "1348109832792940544-yBWH10NHtk5UTM4pDgDaDMP3NliuDl"
+access_secret = "8rycVBcQLkIc0RyEWdsIdWPIW87vLjOGhXa4DKWdub8Er"
+
+[platforms.github]
+access_token = "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"
+username = "rixingyike"
+
