@@ -45,6 +45,11 @@ jobs:
       - name: Build site with RustPress
         run: rustpress -m source build -o public
 
+      - name: Copy static resources
+        run: |
+          cp source/CNAME public/ 2>/dev/null || true
+          cp source/ads.txt public/ 2>/dev/null || true
+
       # 上传构建结果到 GitHub Pages
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4

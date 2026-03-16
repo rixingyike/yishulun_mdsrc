@@ -7,6 +7,7 @@ base_url = "https://yishulun.com"
 domain = "https://yishulun.com"
 icp_license = "京ICP备14007000号-8"
 start_year = 2002
+keep_files = ["CNAME", "ads.txt"]
 
 [theme]
 name = "default"
