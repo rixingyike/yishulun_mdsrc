@@ -4,8 +4,7 @@ createTime: 2024-05-12 08:30:00
 layout: about
 toc: false
 ---
-
-# 关于我
+# 关于作者
 
 大学计算机讲师。微信学堂[《小程序性能优化实践》](https://developers.weixin.qq.com/community/business/course/000606628dc2e86dc0ddcbb115940d)专题讲师、极客时间[《微信小程序全栈开发实战》](http://gk.link/a/10AdC)课程讲师，国企一汽大众等企业内训讲师。著有[《微信小游戏开发》](https://item.jd.com/13630053.html)两册、[《小程序从0到1》](https://e.jd.com/30401467.html)等计算机畅销图书。是[腾讯云最具价值专家（TVP）](https://cloud.tencent.com/tvp/124)、腾讯课堂年度最具影响力专家、中移联合智库 ICT 专家级讲师、极客时间荣誉讲师等。
 
