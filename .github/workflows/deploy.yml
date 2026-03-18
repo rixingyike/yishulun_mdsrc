@@ -50,12 +50,6 @@ jobs:
           cp source/CNAME public/ 2>/dev/null || true
           cp source/ads.txt public/ 2>/dev/null || true
 
-      # 上传构建结果到 GitHub Pages
-      - name: Upload build artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          path: public
-
       # 部署到外部仓库
       - name: Deploy to external repository
         uses: cpina/github-action-push-to-another-repository@v1.7.2
