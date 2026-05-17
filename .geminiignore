@@ -1,0 +1,16 @@
+.git/
+.gemini/
+.agent/
+node_modules/
+dist/
+build/
+*.log
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.pdf
+*.zip
+*.tar.gz
+.DS_Store
+tmp/
