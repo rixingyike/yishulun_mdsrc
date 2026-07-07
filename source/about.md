@@ -1,12 +1,14 @@
 ---
-title: 关于我
+title: 关于作者
 createTime: 2024-05-12 08:30:00
 layout: about
 toc: false
+comments: false
 ---
-# 关于作者
 
-大学计算机讲师。微信学堂[《小程序性能优化实践》](https://developers.weixin.qq.com/community/business/course/000606628dc2e86dc0ddcbb115940d)专题讲师、极客时间[《微信小程序全栈开发实战》](http://gk.link/a/10AdC)课程讲师，国企一汽大众等企业内训讲师。著有[《微信小游戏开发》](https://item.jd.com/13630053.html)两册、[《小程序从0到1》](https://e.jd.com/30401467.html)等计算机畅销图书。是[腾讯云最具价值专家（TVP）](https://cloud.tencent.com/tvp/member/124)、腾讯课堂年度最具影响力专家、中移联合智库 ICT 专家级讲师、极客时间荣誉讲师等。
+# 作者简介
+
+大学计算机讲师。微信学堂[《小程序性能优化实践》](https://developers.weixin.qq.com/community/business/course/000606628dc2e86dc0ddcbb115940d)专题讲师、极客时间[《微信小程序全栈开发实战》](http://gk.link/a/10AdC)课程讲师，国企一汽大众等企业内训讲师。著有[《微信小游戏开发》](https://item.jd.com/13630053.html)两册、[《小程序从0到1》](https://e.jd.com/30401467.html)等计算机畅销图书。是[腾讯云最具价值专家（TVP）](https://cloud.tencent.com/tvp/124)、腾讯课堂年度最具影响力专家、中移联合智库 ICT 专家级讲师、极客时间荣誉讲师等。
 
 ## 出版著作
 
@@ -18,7 +20,7 @@ toc: false
 - 2022年04月，在微信学堂上架[《小程序性能优化实践》](https://developers.weixin.qq.com/community/business/course/000606628dc2e86dc0ddcbb115940d)视频课程
 - 2020年05月，在极客时间上架[《微信小程序全栈开发实战》](http://gk.link/a/10AdC)视频课程
 
-## 奖项荣誉
+## 奖项与荣誉
 
 - 2024年04月，被授予「极客时间荣誉讲师」称号
 - 2023年01月，被授予「中移联合智库 ICT 专家级讲师」称号
@@ -31,35 +33,37 @@ toc: false
 
 2015年05月为北医三院白血病人捐款 65577 元
 
-<img src="assets/gongyi.HKQDVpja.jpg" alt="活动见证" style="zoom: 25%;" />
+<img src="/static/images/gongyi.jpg" alt="活动见证" style="zoom: 20%;" />
 
-## 技术
+## 技术栈与工具
 
-我主要使用以下技术栈进行开发：
+我主要使用以下技术栈与工具进行开发和日常工作：
 
-- **后端开发：** Rust, Python, Node.js
-- **前端开发：** JavaScript, React, Vue.js
-- **数据库：** PostgreSQL, MySQL, Redis
-- **云服务：** Docker, Kubernetes
-- **工具：** Git, Linux, VS Code
-- **小程序开发：** 微信小程序、微信小游戏
+* ⚙️ 后端： Rust, Go, Python, Node.js, ASP, Python, Linux
+* 🖥️ 前端与客户端： JavaScript/TypeScript, Vue.js/React, Tauri, 浏览器扩展, 微信小程序, 微信小游戏, AS3, Flex, Flash
+* 🗄️ 数据与基础设施： SQLite, MySQL, Redis, Colima (Docker), Cloudflare
+* 🤖 AI CLI： agy, opencode
+* ⌨️ 编码工具： Zed, Kitty, Git
+* 🛠️ 桌面效能工具： Edge, Maccy, PixPin, scrcpy, LocalSend, Tabbit, IINA
+* 🚀 写作： Pushpen (AI 协作创作软件，自己编写的)
 
-## 兴趣
+## 兴趣爱好
 
-除了编程，我还喜欢：
+除了编程，我还喜欢以下事物：
 
-- 📚 阅读技术书籍和博客
-- ✍️ 技术写作和教学培训
-- 📷 摄影，记录生活中的美好瞬间
-- 🌍 旅行，体验不同的文化
-- 💡 开源项目贡献
+* 🍳 生活日常： 烹饪，超市购物
+* 🎵 艺术雅趣： 乐器箫，篆刻，书法
+* 📖 闲暇阅读： 阅读《臭食志》等奇趣杂书，历史与网文小说
+* ✍️ 文字创作： 图书写作（技术写作、散文创作与小说创作）
+* 🚵 户外运动： 山野徒步，单车骑行
 
-## 联系
+<img src="/static/images/qiche.jpg" alt="单车骑行" style="zoom: 25%;" />
+
+## 联系我
 
 欢迎来信交流。如果你对我的文章有任何问题或建议，或者想要交流技术话题，欢迎通过以下方式联系我：
 
-- 📧 邮箱：9830131@qq.com
-- 🐦 X：https://x.com/coderliyi
-- 📱 微信：9830131
+- 邮箱：9830131@qq.com
+- X：https://x.com/jinshimanong
 
-感谢访问！
+感谢您的访问！

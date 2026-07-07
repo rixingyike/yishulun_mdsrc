@@ -4,7 +4,7 @@ layout: project
 version: 0.1.21
 description: 增量编译、倒分页、无后端的 Rust 纯静态博客程序。支持 Markdown 写作、主题定制、插件系统和热更新开发模式。
 createTime: 2026-02-19 15:00:00
-icon: /assets/rustpress_logo.png
+icon: assets/rustpress_logo.png
 screenshots: []
 downloads:
   - platform: Cargo 安装
@@ -78,4 +78,3 @@ my-blog/
 
 Apache License 2.0 — 可自由使用、修改和分发。
 
-2026/02/25

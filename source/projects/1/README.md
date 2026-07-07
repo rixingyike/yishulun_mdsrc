@@ -4,14 +4,14 @@ layout: project
 version: 1.0.0
 description: 一款大字有声圣经朗读应用，支持新约旧约全书、繁体中文显示、离线语音朗读，适配 macOS 与 Android 多平台。
 createTime: 2026-02-19 14:00:00
-icon: /assets/enyan/icon.png
+icon: assets/icon.png
 screenshots:
-  - /assets/enyan/screenshot1.png
-  - /assets/enyan/screenshot2.png
-  - /assets/enyan/screenshot3.png
-  - /assets/enyan/screenshot4.png
-  - /assets/enyan/screenshot5.png
-  - /assets/enyan/screenshot6.png
+  - assets/screenshot1.png
+  - assets/screenshot2.png
+  - assets/screenshot3.png
+  - assets/screenshot4.png
+  - assets/screenshot5.png
+  - assets/screenshot6.png
 downloads:
   - platform: macOS (Apple Silicon)
     url: https://gitee.com/rxyk/enyan/releases/download/v1.0.0/enyan-macos-arm64.app.zip
@@ -67,8 +67,3 @@ toc: false
 
 > 不下载资源包也可正常使用 App 的默认内容。
 
-## 注意
-
-在手机上下载安装包，如果发现后缀是 zip，将 zip 去掉，保留 apk 直接安装即可。程序安全无毒，相关检测提示可直接忽略。
-
-2026/02/25

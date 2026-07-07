@@ -1,0 +1,160 @@
+full_compile = false
+last_build_time = "2026-07-07 13:01:11"
+md_dir = "source"
+output_dir = "public"
+
+[[sidebar.hot_categories]]
+count = 38
+name = "blog"
+
+[[sidebar.hot_categories]]
+count = 18
+name = "docs"
+
+[[sidebar.hot_categories]]
+count = 6
+name = "posts"
+
+[[sidebar.hot_categories]]
+count = 2
+name = "projects"
+
+[[sidebar.hot_posts]]
+categories = ["projects"]
+date_ymd = "2026-02-19"
+slug = "enyan"
+title = "恩言 - 大字有声圣经"
+
+[[sidebar.hot_posts]]
+categories = ["projects"]
+date_ymd = "2026-02-19"
+slug = "rustpress"
+title = "RustPress - 纯静态博客引擎"
+
+[[sidebar.hot_posts]]
+categories = ["blog", "2026"]
+date_ymd = "2026-01-03"
+slug = "2"
+title = "手机和相机的区别是什么？"
+
+[[sidebar.hot_posts]]
+categories = ["blog", "2025"]
+date_ymd = "2025-12-25"
+slug = "93"
+title = "墨问终端脚本发布独立版 2.1，支持多图片上传"
+
+[[sidebar.hot_posts]]
+categories = ["blog", "技术"]
+date_ymd = "2025-11-04"
+slug = "rust-tag-test"
+title = "Rust 标签功能测试"
+
+[[sidebar.hot_posts]]
+categories = ["blog", "技术"]
+date_ymd = "2025-11-04"
+slug = "11"
+title = "增量编译测试文章"
+
+[[sidebar.hot_posts]]
+categories = ["blog", "测试", "子类"]
+date_ymd = "2025-11-04"
+slug = "13"
+title = "增量验证:只重建受影响集合"
+
+[[sidebar.hot_posts]]
+categories = ["blog", "web"]
+date_ymd = "2025-03-03"
+slug = "4"
+title = "现代CSS技术"
+
+[[sidebar.hot_posts]]
+categories = ["docs", "claude"]
+date_ymd = "2025-02-19"
+slug = "3.Claude提示实用编写技巧"
+title = "3.Claude提示实用编写技巧"
+
+[[sidebar.hot_posts]]
+categories = ["docs", "claude"]
+date_ymd = "2025-02-19"
+slug = "4.Claude的具体提示实例"
+title = "4.Claude的具体提示实例"
+
+[[sidebar.hot_tags]]
+count = 1
+name = "AI"
+
+[[sidebar.hot_tags]]
+count = 6
+name = "AS3 Expert"
+
+[[sidebar.hot_tags]]
+count = 1
+name = "Actix-web"
+
+[[sidebar.hot_tags]]
+count = 1
+name = "Angular"
+
+[[sidebar.hot_tags]]
+count = 1
+name = "ChatGPT"
+
+[[sidebar.hot_tags]]
+count = 1
+name = "Composition API"
+
+[[sidebar.hot_tags]]
+count = 1
+name = "DeFi"
+
+[[sidebar.hot_tags]]
+count = 1
+name = "DevOps"
+
+[[sidebar.hot_tags]]
+count = 2
+name = "Docker"
+
+[[sidebar.hot_tags]]
+count = 1
+name = "Flutter"
+
+[[sidebar.hot_tags]]
+count = 1
+name = "Git"
+
+[[sidebar.hot_tags]]
+count = 2
+name = "Go"
+
+[[sidebar.hot_tags]]
+count = 1
+name = "HTTP"
+
+[[sidebar.hot_tags]]
+count = 1
+name = "Hooks"
+
+[[sidebar.hot_tags]]
+count = 1
+name = "IndieHacker"
+
+[[sidebar.hot_tags]]
+count = 1
+name = "JavaScript"
+
+[[sidebar.hot_tags]]
+count = 1
+name = "MySQL"
+
+[[sidebar.hot_tags]]
+count = 1
+name = "Option"
+
+[[sidebar.hot_tags]]
+count = 1
+name = "PostgreSQL"
+
+[[sidebar.hot_tags]]
+count = 1
+name = "Promise"
