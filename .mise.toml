@@ -1,0 +1,63 @@
+[tasks.dev]
+description = "启动 yishulun 开发服务器（支持 Rust 源码及内容热重载）"
+run = '''
+#!/usr/bin/env bash
+set -euo pipefail
+
+RUSTPRESS_DIR="/Users/jsmn/workspace/rustpress"
+CURRENT_DIR="/Users/jsmn/workspace/yishulun_mdsrc"
+PORT=1111
+
+# 1. 链接本地的 themes 文件夹
+echo "=== [Development] 正在链接 themes 目录 ==="
+rm -rf "$CURRENT_DIR/themes"
+ln -sfn "$RUSTPRESS_DIR/themes" "$CURRENT_DIR/themes"
+
+# 2. 自动监听并拉起 cargo run serve
+rm -f "$CURRENT_DIR/.rebuild-trigger"
+echo "=== 开发服务器已启动，监听 .rebuild-trigger 编译触发信号 ==="
+
+while true; do
+  # 启动前强行释放 1111 端口占用，防止旧的进程残留
+  lsof -ti:$PORT | xargs kill -9 2>/dev/null || true
+  
+  # 设置环境变量
+  export env=pushpen
+  export ENV=pushpen
+  
+  # 在后台通过 cargo run 启动 rustpress serve
+  cargo run --manifest-path "$RUSTPRESS_DIR/Cargo.toml" -- \
+    --md-dir "$CURRENT_DIR/source" \
+    serve --port $PORT --output-dir "$CURRENT_DIR/public" &
+  
+  PID=$!
+  
+  trap 'kill $PID 2>/dev/null; lsof -ti:$PORT | xargs kill -9 2>/dev/null || true; exit' SIGINT SIGTERM
+  
+  while true; do
+    if [ -f "$CURRENT_DIR/.rebuild-trigger" ]; then
+      rm -f "$CURRENT_DIR/.rebuild-trigger"
+      echo "=== [Trigger] 收到重新编译信号，正在重启开发服务器... ==="
+      kill $PID 2>/dev/null
+      wait $PID 2>/dev/null
+      lsof -ti:$PORT | xargs kill -9 2>/dev/null || true
+      break
+    fi
+    
+    # 检测后台进程是否意外退出
+    if ! kill -0 $PID 2>/dev/null; then
+      echo "=== [Status] 开发服务器已停止（可能编译失败或挂起），等待重新编译信号... ==="
+      while true; do
+        if [ -f "$CURRENT_DIR/.rebuild-trigger" ]; then
+          rm -f "$CURRENT_DIR/.rebuild-trigger"
+          echo "=== [Trigger] 重新拉起开发服务器... ==="
+          break 2
+        fi
+        sleep 1
+      done
+    fi
+    
+    sleep 1
+  done
+done
+'''
