@@ -42,11 +42,6 @@ jobs:
       - name: Verify RustPress
         run: rustpress -V
 
-      - name: Checkout themes
-        run: |
-          git clone --depth 1 https://github.com/rixingyike/rustpress.git /tmp/rustpress
-          cp -r /tmp/rustpress/themes ./themes
-
       - name: Build site with RustPress
         run: rustpress -m source build -o public
 

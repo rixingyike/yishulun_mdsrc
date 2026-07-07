@@ -11,9 +11,13 @@ RUSTPRESS_BIN="$RUSTPRESS_DIR/target/release/rustpress"
 CURRENT_DIR="/Users/jsmn/workspace/yishulun_mdsrc"
 
 # 1. 链接本地的 themes 文件夹到当前博客根目录下，以便 rustpress 能够找到 "light" 主题
-echo "=== [Production] 正在链接 themes 目录 ==="
-rm -rf "$CURRENT_DIR/themes"
-ln -sfn "$RUSTPRESS_DIR/themes" "$CURRENT_DIR/themes"
+echo "=== [Production] 检查 themes 目录 ==="
+if [ ! -d "$CURRENT_DIR/themes" ] && [ ! -L "$CURRENT_DIR/themes" ]; then
+  if [ -d "$RUSTPRESS_DIR/themes" ]; then
+    echo "=== [Production] 正在链接 themes 目录 ==="
+    ln -sfn "$RUSTPRESS_DIR/themes" "$CURRENT_DIR/themes"
+  fi
+fi
 
 # 2. 编译本地的 rustpress 项目
 echo "=== [Production] 正在 Release 模式下编译 RustPress ==="
