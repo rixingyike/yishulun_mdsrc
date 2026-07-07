@@ -42,6 +42,11 @@ jobs:
       - name: Verify RustPress
         run: rustpress -V
 
+      - name: Checkout themes
+        run: |
+          git clone --depth 1 https://github.com/rixingyike/rustpress.git /tmp/rustpress
+          cp -r /tmp/rustpress/themes ./themes
+
       - name: Build site with RustPress
         run: rustpress -m source build -o public
 
@@ -49,6 +54,8 @@ jobs:
         run: |
           cp source/CNAME public/ 2>/dev/null || true
           cp source/ads.txt public/ 2>/dev/null || true
+          cp source/source/_redirects public/_redirects 2>/dev/null || true
+          cp source/_redirects public/_redirects 2>/dev/null || true
 
       # 部署到外部仓库
       - name: Deploy to external repository

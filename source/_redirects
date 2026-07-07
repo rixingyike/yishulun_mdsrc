@@ -1,0 +1,55 @@
+# ==========================================
+# Cloudflare Pages Redirects Rules
+# ==========================================
+
+# 1. 菜单与独立页面重定向
+/archives.html          /archives/index.html    301
+/categories.html        /categories/index.html  301
+/tags.html              /tags/index.html        301
+/projects.html          /projects/index.html    301
+/docs.html              /columns/index.html     301
+/friends.html           /friends/index.html     301
+
+# 2. 项目页特殊单页重定向
+/projects/enyan.html      /projects/1/index.html  301
+/projects/rustpress.html  /projects/2/index.html  301
+
+# 3. 专栏路径精细重定向（docs -> columns）
+/docs/claude/*                                           /columns/1/:splat  301
+/docs/向GPT高效提问/*                                    /columns/2/:splat  301
+/docs/%E5%90%91GPT%E9%AB%98%E6%95%88%E6%8F%90%E9%97%AE/*      /columns/2/:splat  301
+/docs/indiehacker-handbook.html                          /columns/3/index.html 301
+/docs/indiehacker-handbook/*                             /columns/3/:splat  301
+/docs/ChatGPT.html                                       /columns/4/index.html 301
+/docs/rust/*                                             /columns/5/:splat  301
+/docs/novel/*                                            /columns/6/:splat  301
+/docs/guide/*                                            /columns/7/:splat  301
+/docs/*                                                  /columns/:splat    301
+
+# 4. 文章路径按年份重定向 (posts/YYYY/ -> YYYY/)
+/posts/2008/* /2008/:splat 301
+/posts/2009/* /2009/:splat 301
+/posts/2010/* /2010/:splat 301
+/posts/2018/* /2018/:splat 301
+/posts/2019/* /2019/:splat 301
+/posts/2020/* /2020/:splat 301
+/posts/2021/* /2021/:splat 301
+/posts/2022/* /2022/:splat 301
+/posts/2023/* /2023/:splat 301
+/posts/2024/* /2024/:splat 301
+/posts/2025/* /2025/:splat 301
+/posts/2026/* /2026/:splat 301
+
+# 5. 文章路径按年份重定向 (blog/YYYY/ -> YYYY/)
+/blog/2008/* /2008/:splat 301
+/blog/2009/* /2009/:splat 301
+/blog/2010/* /2010/:splat 301
+/blog/2018/* /2018/:splat 301
+/blog/2019/* /2019/:splat 301
+/blog/2020/* /2020/:splat 301
+/blog/2021/* /2021/:splat 301
+/blog/2022/* /2022/:splat 301
+/blog/2023/* /2023/:splat 301
+/blog/2024/* /2024/:splat 301
+/blog/2025/* /2025/:splat 301
+/blog/2026/* /2026/:splat 301
