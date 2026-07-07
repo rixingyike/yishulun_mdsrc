@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+<!-- 关于页面模板 -->
+{% block title %}关于我 - {{ site.name }}{% endblock %}
+
+{% block content %}
+<div class="max-w-4xl mx-auto">
+    <div class="flex flex-col lg:flex-row gap-8">
+        <div class="flex-1">
+            {% include "components/author-bio.html" %}
+        </div>
+    </div>
+
+    <!-- 详细介绍（渲染 about.md 的 Markdown 正文） -->
+    <div class="card mb-8">
+        <div class="card-body prose prose-lg max-w-none">
+            {% if page_content %}
+            {{ page_content | safe }}
+            {% else %}
+            <p class="text-gray-500">暂无关于页面内容，请在 <code>source/about.md</code> 填写。</p>
+            {% endif %}
+        </div>
+    </div>
+
+    <!-- 博客统计 -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="card text-center">
+            <div class="card-body">
+                <div class="text-3xl font-bold text-primary-600 mb-2">
+                    {{ posts | length | default(value=0) }}
+                </div>
+                <div class="text-gray-600">篇文章</div>
+            </div>
+        </div>
+        
+        <div class="card text-center">
+            <div class="card-body">
+                <div class="text-3xl font-bold text-primary-600 mb-2">
+                    {{ all_tags | length | default(value=0) }}
+                </div>
+                <div class="text-gray-600">个标签</div>
+            </div>
+        </div>
+        
+        <div class="card text-center">
+            <div class="card-body">
+                <div class="text-3xl font-bold text-primary-600 mb-2">
+                    {{ all_categories | length | default(value=0) }}
+                </div>
+                <div class="text-gray-600">个分类</div>
+             </div>
+         </div>
+         
+         <!-- 目录侧边栏（可通过 frontmatter: toc 控制） -->
+         {% if page and (page.toc | default(value=true)) %}
+         <div class="hidden lg:block lg:w-64 flex-shrink-0">
+             {% include "components/toc.html" %}
+         </div>
+         {% endif %}
+     </div>
+ </div>
+ {% endblock %}
+ 
+ {% block ad1 %}
+ {% endblock %}
