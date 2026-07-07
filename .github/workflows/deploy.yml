@@ -49,7 +49,6 @@ jobs:
         run: |
           cp source/CNAME public/ 2>/dev/null || true
           cp source/ads.txt public/ 2>/dev/null || true
-          cp source/source/_redirects public/_redirects 2>/dev/null || true
           cp source/_redirects public/_redirects 2>/dev/null || true
 
       # 部署到外部仓库
