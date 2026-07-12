@@ -44,8 +44,8 @@ comments: false
 * 🗄️ 数据与基础设施： SQLite, MySQL, Redis, Colima (Docker), Cloudflare
 * 🤖 AI CLI： agy, opencode
 * ⌨️ 编码工具： Zed, Kitty, Git
-* 🛠️ 桌面效能工具： Edge, Maccy, PixPin, scrcpy, LocalSend, Tabbit, IINA
-* 🚀 写作： Pushpen (AI 协作创作软件，自己编写的)
+* 🛠️ 桌面效能工具： Tabbit, Maccy, PixPin, scrcpy, LocalSend, IINA
+* 🚀 写作： RustPress、PushPen (自编软件)
 
 ## 兴趣爱好
 
