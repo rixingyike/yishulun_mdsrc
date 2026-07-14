@@ -5,7 +5,7 @@ layout: columns
 description: "AI 辅助创作的科幻小说，探索人与 AI 共创的边界。"
 product_id: "yishulun.com_columns_6"
 price: 0.0
-draft: true
+draft: false
 tags: ['小说', '科幻', 'AI创作']
 catalog:
   - "1.第一章：启程.md"

@@ -5,7 +5,7 @@ layout: columns
 description: "RustPress 静态博客系统的官方用户指南，涵盖安装、配置、主题定制等使用说明。"
 product_id: "yishulun.com_columns_7"
 price: 0.0
-draft: true
+draft: false
 tags: ['RustPress', '文档', '用户指南']
 catalog:
   - "1.安装与配置.md"
