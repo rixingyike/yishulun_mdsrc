@@ -42,8 +42,8 @@ comments: false
 * ⚙️ 后端： Rust, Go, Python, Node.js, ASP, Python, Linux
 * 🖥️ 前端与客户端： JavaScript/TypeScript, Vue.js/React, Tauri, 浏览器扩展, 微信小程序, 微信小游戏, AS3, Flex, Flash
 * 🗄️ 数据与基础设施： SQLite, MySQL, Redis, Colima (Docker), Cloudflare
-* 🤖 AI CLI： agy, opencode
-* ⌨️ 编码工具： Zed, Kitty, Git
+* 🤖 AI CLI： agy, opencode, claude code
+* ⌨️ 编码工具： Zed, Kitty, Git, CC Switch
 * 🛠️ 桌面效能工具： Tabbit, Maccy, PixPin, scrcpy, LocalSend, IINA
 * 🚀 写作： RustPress、PushPen (自编软件)
 
@@ -57,9 +57,9 @@ comments: false
 * ✍️ 文字创作： 图书写作（技术写作、散文创作与小说创作）
 * 🚵 户外运动： 山野徒步，单车骑行
 
-<img src="/static/images/qiche.jpg" alt="单车骑行" style="zoom: 25%;" />
+<img src="/static/images/qiche.jpg" alt="骑行" style="zoom: 25%;" />
 
-## 联系我
+## 联系
 
 欢迎来信交流。如果你对我的文章有任何问题或建议，或者想要交流技术话题，欢迎通过以下方式联系我：
 
