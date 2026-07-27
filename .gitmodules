@@ -1,0 +1,4 @@
+[submodule "skills-shared"]
+	path = skills-shared
+	url = https://github.com/rixingyike/skills-shared.git
+	branch = main
