@@ -1,6 +1,6 @@
 ---
 title: 如何使用Claude AI辅助创作小说
-createTime: 2025/02/19 13:58:17
+createTime: 2024/02/19 13:58:17
 # permalink: /article/ykpp4562/
 ---
 # 我如何使用 GPT4 与 Claude 辅助创作小说，及两个 AI 的辅助表现
