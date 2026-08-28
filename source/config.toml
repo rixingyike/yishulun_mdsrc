@@ -1,5 +1,5 @@
 [site]
-name = "一树仑·金石碼农"
+name = "艺述论"
 description = "一花一世界，一树一菩提。"
 logo = "/static/images/avatar.png"
 author = "金石碼农"
@@ -16,7 +16,7 @@ name = "light"
 [author]
 name = "金石碼农"
 maxim = "势利纷华，不近者为洁，近之而不染者尤洁；智械机巧，不知者为高，知之而不用者尤高。"
-bio = "大学计算机讲师，腾讯云最具价值专家（TVP），📚《小程序从0到1》《微信小游戏开发》作者，微信学堂讲师，极客时间荣誉讲师。公众号同名。"
+bio = "大学计算机讲师，腾讯云最具价值专家（TVP），《小程序从0到1》《微信小游戏开发》作者，微信学堂讲师，极客时间荣誉讲师。公众号：艺述论。"
 avatar = "/static/images/avatar.png"
 location = "北京, 中国"
 website = "https://yishulun.com"

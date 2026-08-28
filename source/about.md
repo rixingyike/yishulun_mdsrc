@@ -6,11 +6,11 @@ toc: false
 comments: false
 ---
 
-# 作者简介
+# 简介
 
 大学计算机讲师。微信学堂[《小程序性能优化实践》](https://developers.weixin.qq.com/community/business/course/000606628dc2e86dc0ddcbb115940d)专题讲师、极客时间[《微信小程序全栈开发实战》](http://gk.link/a/10AdC)课程讲师，国企一汽大众等企业内训讲师。著有[《微信小游戏开发》](https://item.jd.com/13630053.html)两册、[《小程序从0到1》](https://e.jd.com/30401467.html)等计算机畅销图书。是[腾讯云最具价值专家（TVP）](https://cloud.tencent.com/tvp/member/124)、腾讯课堂年度最具影响力专家、中移联合智库 ICT 专家级讲师、极客时间荣誉讲师等。
 
-## 出版著作
+## 出版
 
 - 2023年02月，在机械工业出版社出版[《微信小游戏开发》](https://item.jd.com/13630053.html)上下两册
 - 2017年12月，在机工出版[《小程序从0到1》](https://e.jd.com/30401467.html)
@@ -20,7 +20,7 @@ comments: false
 - 2022年04月，在微信学堂上架[《小程序性能优化实践》](https://developers.weixin.qq.com/community/business/course/000606628dc2e86dc0ddcbb115940d)视频课程
 - 2020年05月，在极客时间上架[《微信小程序全栈开发实战》](http://gk.link/a/10AdC)视频课程
 
-## 奖项与荣誉
+## 奖项
 
 - 2024年04月，被授予「极客时间荣誉讲师」称号
 - 2023年01月，被授予「中移联合智库 ICT 专家级讲师」称号
@@ -35,27 +35,23 @@ comments: false
 
 <img src="/static/images/gongyi.jpg" alt="活动见证" style="zoom: 20%;" />
 
-## 技术栈与工具
-
-我主要使用以下技术栈与工具进行开发和日常工作：
+## 技术栈
 
 * ⚙️ 后端： Rust, Go, Python, Node.js, ASP, Python, Linux
 * 🖥️ 前端与客户端： JavaScript/TypeScript, Vue.js/React, Tauri, 浏览器扩展, 微信小程序, 微信小游戏, AS3, Flex, Flash
 * 🗄️ 数据与基础设施： SQLite, MySQL, Redis, Colima (Docker), Cloudflare
 * 🤖 AI CLI： agy, opencode, claude code
 * ⌨️ 编码工具： Zed, Kitty, Git, CC Switch
-* 🛠️ 桌面效能工具： Tabbit, Maccy, PixPin, scrcpy, LocalSend, IINA
-* 🚀 写作： RustPress、PushPen (自编软件)
+* 🛠️ 效能工具： Tabbit, Maccy, PixPin, scrcpy, LocalSend, IINA
+* 🚀 写作： RustPress、PushPen
 
-## 兴趣爱好
+## 兴趣
 
-除了编程，我还喜欢以下事物：
-
-* 🍳 生活日常： 烹饪，超市购物
-* 🎵 艺术雅趣： 乐器箫，篆刻，书法
-* 📖 闲暇阅读： 阅读《臭食志》等奇趣杂书，历史与网文小说
-* ✍️ 文字创作： 图书写作（技术写作、散文创作与小说创作）
-* 🚵 户外运动： 山野徒步，单车骑行
+* 🍳 生活： 烹饪，购物
+* 🎵 艺术： 箫，篆刻，书法
+* 📖 阅读： 奇趣杂书，历史书与小说
+* ✍️ 创作： 小说创作，专栏撰写
+* 🚵 运动： 徒步，骑行
 
 <img src="/static/images/qiche.jpg" alt="骑行" style="zoom: 25%;" />
 
@@ -66,4 +62,4 @@ comments: false
 - 邮箱：9830131@qq.com
 - X：https://x.com/jinshimanong
 
-感谢您的访问！
+感谢访问！
