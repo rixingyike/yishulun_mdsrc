@@ -1,22 +1,17 @@
 ---
-title: "Claude 使用教程"
+title: "谈写作"
 cover: "assets/cover.png"
 layout: columns
-description: "从入门到实战，全面掌握 Anthropic Claude 的使用与提示工程技巧。AI 有多大能力，完全取决于使用它的人。"
+description: "如何撰写专栏，如何创作小说"
 product_id: "yishulun.com_columns_1"
 price: 0.0
-draft: false
-tags: ['Claude', 'AI', '提示工程']
+draft: f
+tags: ['技术专栏', '文学小说']
 catalog:
-  - "1.Claude简介.md"
-  - "2.Claude提示的初步编写与优化.md"
-  - "3.Claude提示实用编写技巧.md"
-  - "4.Claude的具体提示实例.md"
-  - "5.Claude提示故障排查.md"
-  - "6.创作一篇科幻故事的实践.md"
+  - "大文豪创作的信心来自哪里.md"
 createTime: 2025/02/19 13:58:17
 ---
 
-# Claude 使用教程
+# 谈写作
 
-从入门到实战，全面掌握 Anthropic Claude 的使用与提示工程技巧。本专栏共 6 篇，涵盖 Claude 简介、提示编写、实用技巧、具体实例及故障排查。
+聊一聊如何写技术专栏，如何撰写文学小说。
