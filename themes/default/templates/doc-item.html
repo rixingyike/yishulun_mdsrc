@@ -103,11 +103,16 @@
       <nav class="breadcrumb not-prose text-sm text-gray-500 mb-4">
         <a href="/columns/" class="hover:text-primary-600 transition-colors">专栏</a>
         <span class="text-gray-300 mx-1">/</span>
-        <a href="/columns/{{ page.categories[1] }}/" class="hover:text-primary-600 transition-colors">{{ book_name }}</a>
+        <a href="/columns/{{ page.categories[1] }}/" class="hover:text-primary-600 transition-colors">{{ book_name | default(value="专栏") }}</a>
       </nav>
 
       <header class="mb-4 border-b border-gray-200 pb-4 not-prose">
-        <h1 class="text-3xl font-extrabold text-gray-900 tracking-tight mb-2">{{ page.title }}</h1>
+        <h1 class="text-3xl font-extrabold text-gray-900 tracking-tight mb-2 flex items-center flex-wrap gap-2">
+          <span>{{ page.title }}</span>
+          {% if page.draft %}
+          <span class="inline-flex items-center px-2.5 py-0.5 text-xs font-semibold bg-amber-100 text-amber-800 border border-amber-300 rounded">草稿</span>
+          {% endif %}
+        </h1>
         {% if page.date_ymd %}
         <p class="text-sm text-gray-500">更新于 {{ page.date_ymd }}</p>
         {% endif %}
@@ -118,7 +123,7 @@
       </div>
 
       <!-- 版权信息 -->
-      <div class="mt-8 text-xs text-gray-500 not-prose">
+      <div class="text-xs text-gray-500 not-prose" style="margin-top: 120px;">
         <p>本文链接：<a href="{{ site.domain }}{{ page.url }}" class="text-primary-600 hover:underline" target="_blank" rel="noopener">{{ site.domain }}{{ page.url }}</a></p>
         <p class="mt-1">共享许可：署名-非商业性 4.0 国际 (CC-BY-NC-4.0) <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener" class="text-primary-600 hover:underline">查看许可说明</a></p>
       </div>

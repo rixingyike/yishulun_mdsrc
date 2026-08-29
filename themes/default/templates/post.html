@@ -67,8 +67,11 @@
 
                 <!-- 文章头部 -->
                 <header class="mb-8">
-                    <h1 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-gray-900 mb-3 leading-tight">
-                        {{ page.title | default(value=page.slug) }}
+                    <h1 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-gray-900 mb-3 leading-tight flex items-center flex-wrap gap-2">
+                        <span>{{ page.title | default(value=page.slug) }}</span>
+                        {% if page.draft %}
+                        <span class="inline-flex items-center px-2.5 py-0.5 text-xs font-semibold bg-amber-100 text-amber-800 border border-amber-300 rounded">草稿</span>
+                        {% endif %}
                     </h1>
 
                     <div class="article-meta mb-3">
@@ -91,22 +94,96 @@
                 </header>
 
                 <!-- 文章内容 -->
+                <style>
+                    /* 文章内容：隐藏 H1（与原样式兼容） */
+                    .article-content > h1:first-of-type {
+                        display: none !important;
+                    }
+                    /* 代码块右上角"复制"按钮：默认半透明，hover <pre> 才显形 */
+                    .article-content .copy-code-btn {
+                        position: absolute;
+                        top: 0.5rem;
+                        right: 0.5rem;
+                        padding: 0.25rem 0.625rem;
+                        font-size: 0.75rem;
+                        line-height: 1;
+                        color: #4b5563;
+                        background: rgba(255, 255, 255, 0.92);
+                        border: 1px solid #e5e7eb;
+                        border-radius: 0.375rem;
+                        cursor: pointer;
+                        opacity: 0;
+                        transition: opacity 0.15s ease-in-out, background 0.15s ease-in-out, color 0.15s ease-in-out;
+                        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+                        user-select: none;
+                    }
+                    .article-content pre {
+                        position: relative;
+                    }
+                    .article-content pre:hover .copy-code-btn,
+                    .article-content .copy-code-btn:focus-visible {
+                        opacity: 1;
+                    }
+                    .article-content .copy-code-btn:hover {
+                        background: #f3f4f6;
+                        color: #111827;
+                    }
+                    .article-content .copy-code-btn.copied {
+                        background: #059669 !important;
+                        color: #ffffff !important;
+                        border-color: #059669 !important;
+                        opacity: 1 !important;
+                    }
+                </style>
                 <div class="article-content prose prose-lg max-w-none" x-init="$nextTick(() => {
-             // 为代码块添加复制按钮
+             // 为代码块添加复制按钮（绝对定位右上角，默认透明，hover 才出现）
              document.querySelectorAll('pre code').forEach((codeBlock, index) => {
                  const pre = codeBlock.parentElement;
-                 if (!pre.querySelector('.copy-code-btn')) {
-                     const button = document.createElement('button');
-                     button.className = 'copy-code-btn';
-                     button.textContent = '复制';
-                     button.setAttribute('x-data', `{ copied: false }`);
-                     button.setAttribute('@click', `navigator.clipboard.writeText(this.parentElement.querySelector('code').textContent).then(() => { this.copied = true; setTimeout(() => this.copied = false, 2000) })`);
-                     button.setAttribute(':class', `{ 'bg-green-600': copied }`);
-                     button.setAttribute('x-text', `copied ? '已复制' : '复制'`);
-                     
-                     pre.style.position = 'relative';
-                     pre.appendChild(button);
-                 }
+                 if (!pre || pre.querySelector('.copy-code-btn')) return;
+                 const button = document.createElement('button');
+                 button.type = 'button';
+                 button.className = 'copy-code-btn';
+                 button.textContent = 'copy';
+                 button.setAttribute('aria-label', '复制代码');
+
+                 button.addEventListener('click', function() {
+                     const code = pre.querySelector('code');
+                     const text = code ? code.textContent : pre.textContent;
+                     const fallback = function() {
+                         try {
+                             const ta = document.createElement('textarea');
+                             ta.value = text;
+                             ta.style.position = 'fixed';
+                             ta.style.opacity = '0';
+                             ta.style.top = '0';
+                             ta.style.left = '0';
+                             document.body.appendChild(ta);
+                             ta.focus();
+                             ta.select();
+                             const ok = document.execCommand('copy');
+                             ta.remove();
+                             return ok;
+                         } catch (e) { return false; }
+                     };
+                     const done = function(success) {
+                         button.textContent = success ? '代码已复制' : '复制失败';
+                         button.classList.add('copied');
+                         setTimeout(function() {
+                             button.textContent = 'copy';
+                             button.classList.remove('copied');
+                         }, 2000);
+                         if (window.showToast) {
+                             window.showToast(success ? '代码已复制' : '复制失败');
+                         }
+                     };
+                     if (navigator.clipboard && navigator.clipboard.writeText) {
+                         navigator.clipboard.writeText(text).then(() => done(true)).catch(() => done(!!fallback()));
+                     } else {
+                         done(!!fallback());
+                     }
+                 });
+
+                 pre.appendChild(button);
              });
          })">
                     {{ page.content | safe }}
@@ -124,7 +201,7 @@
                 {% endif %}
 
                 <!-- 版权信息 -->
-                <div class="mt-8 text-xs text-gray-500">
+                <div class="text-xs text-gray-500" style="margin-top: 120px;">
                     <p>
                         本文链接：
                         <a href="{{ site.domain }}{{ page.url }}" class="text-primary-600 hover:underline"
