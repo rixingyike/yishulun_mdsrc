@@ -28,21 +28,27 @@
     </div>
     {% endif %}
 
-    <div class="space-y-2">
+    <div class="space-y-3">
         {% for p in column_posts %}
+        {% if p.is_group %}
+        <div class="pt-6 pb-1 flex items-center justify-between" style="padding-left: {{ p.indent_level | default(value=0) * 0.75 }}rem;">
+            <h3 class="text-base font-bold text-moss-ink tracking-wide">{{ p.title }}</h3>
+        </div>
+        {% else %}
         <a href="{{ p.url }}" class="block bg-white border border-sage-line/20 hover:border-cyber-mint transition-colors p-4">
             <div class="flex items-center justify-between" style="padding-left: {{ p.indent_level | default(value=0) * 0.75 }}rem;">
                 <h2 class="text-base font-semibold text-moss-ink flex items-center">
                     {% if p.draft %}
-                    <span class="inline-flex items-center px-1.5 py-0.5 text-xs font-medium bg-amber-100 text-amber-800 border border-amber-300 rounded mr-2 select-none">草稿</span>
+                    <span class="draft-badge hidden inline-flex items-center px-1.5 py-0.5 text-xs font-medium bg-amber-100 text-amber-800 border border-amber-300 rounded mr-2 select-none">草稿</span>
                     {% endif %}
-                    {% if p.catalog_num %}{{ p.catalog_num }}{% else %}{{ loop.index }}{% endif %}. {{ p.title }}
+                    {{ p.title }}
                 </h2>
                 {% if p.date_ymd %}
                 <span class="text-xs text-mist-green flex-shrink-0 ml-4">{{ p.date_ymd }} {{ p.create_time_hm | default(value="08:00") }}</span>
                 {% endif %}
             </div>
         </a>
+        {% endif %}
         {% endfor %}
     </div>
 
@@ -149,7 +155,7 @@
                 <div class="px-4 pt-4">
                     <div class="relative w-full h-44">
                         {% if s.draft %}
-                        <span class="absolute top-2 right-2 z-10 inline-flex items-center px-1.5 py-0.5 text-xs font-medium bg-amber-100 text-amber-800 border border-amber-300 rounded select-none shadow-sm">草稿</span>
+                        <span class="draft-badge hidden absolute top-2 right-2 z-10 inline-flex items-center px-1.5 py-0.5 text-xs font-medium bg-amber-100 text-amber-800 border border-amber-300 rounded select-none shadow-sm">草稿</span>
                         {% endif %}
                         {% if s.cover %}
                             <img src="{{ s.cover }}" alt="{{ s.title }}" class="w-full h-full object-cover">

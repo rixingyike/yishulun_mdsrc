@@ -3,9 +3,11 @@ name = "艺述论"
 description = "一花一世界，一树一菩提。"
 logo = "/static/images/avatar.png"
 author = "金石碼农"
-base_url = "http://localhost:1111"
+base_url = "https://yishulun.com"
 # 在RSS中公开显示的域名
 domain = "https://yishulun.com"
+# 本地与测试环境域名列表（包含这些域名时：展示草稿标识、首页显示短动态发布框）
+dev_domains = ["dev.yishulun.com", "localhost", "127.0.0.1"]
 icp_license = "京ICP备14007000号-8"
 start_year = 2002
 
@@ -37,7 +39,7 @@ rss = "/rss.xml"
 
 # 首页设置
 [homepage]
-hero_title = "欢迎来到一树仑"
+hero_title = "欢迎来到艺述论"
 hero_subtitle = "一花一世界，一树一菩提。"
 hero_background = "/static/images/hero-bg.jpg"
 posts_per_page = 8
