@@ -51,8 +51,9 @@ jobs:
           cp source/ads.txt public/ 2>/dev/null || true
           cp source/_redirects public/_redirects 2>/dev/null || true
 
-      # 部署到外部仓库
+      # 部署到外部仓库（仅在配置了 Secrets Token 时执行）
       - name: Deploy to external repository
+        if: ${{ secrets.EXTERNAL_REPOSITORY_PERSONAL_ACCESS_TOKEN != '' }}
         uses: cpina/github-action-push-to-another-repository@v1.7.2
         env:
           API_TOKEN_GITHUB: ${{ secrets.EXTERNAL_REPOSITORY_PERSONAL_ACCESS_TOKEN }}
