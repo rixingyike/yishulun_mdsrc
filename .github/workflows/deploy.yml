@@ -47,19 +47,22 @@ jobs:
 
       - name: Copy static resources
         run: |
-          cp source/CNAME public/ 2>/dev/null || true
-          cp source/ads.txt public/ 2>/dev/null || true
-          cp source/_redirects public/_redirects 2>/dev/null || true
-
-      # 部署到外部仓库（仅在配置了 Secrets Token 时执行）
-      - name: Deploy to external repository
-        if: ${{ secrets.EXTERNAL_REPOSITORY_PERSONAL_ACCESS_TOKEN != '' }}
-        uses: cpina/github-action-push-to-another-repository@v1.7.2
+      # 原生极速推送到目标静态展示页仓库（支持无 Token 安全跳过）
+      - name: Deploy to rixingyike.github.io
         env:
-          API_TOKEN_GITHUB: ${{ secrets.EXTERNAL_REPOSITORY_PERSONAL_ACCESS_TOKEN }}
-        with:
-          source-directory: public/
-          destination-github-username: rixingyike
-          destination-repository-name: rixingyike.github.io
-          user-email: 9830131@qq.com
-          target-branch: "main"
+          TOKEN: ${{ secrets.EXTERNAL_REPOSITORY_PERSONAL_ACCESS_TOKEN }}
+        run: |
+          if [ -z "$TOKEN" ]; then
+            echo "⚠️ 提示: 未在仓库 Settings -> Secrets 中配置 EXTERNAL_REPOSITORY_PERSONAL_ACCESS_TOKEN，跳过推送到外部仓库。"
+            exit 0
+          fi
+          echo "🚀 开始推送到 rixingyike.github.io..."
+          cd public
+          git init
+          git config user.name "github-actions[bot]"
+          git config user.email "9830131@qq.com"
+          git add -A
+          git commit -m "Deploy from yishulun_mdsrc commit: ${{ github.sha }}" || true
+          git branch -M main
+          git push --force "https://rixingyike:${TOKEN}@github.com/rixingyike/rixingyike.github.io.git" main:main
+          echo "✅ 部署完成！"
