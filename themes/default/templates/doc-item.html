@@ -90,6 +90,9 @@
           class="block px-3 py-2 text-sm rounded-md transition-colors {% if is_active %}bg-primary-50 text-primary-700 font-medium{% else %}text-gray-600 hover:bg-gray-50 hover:text-gray-900{% endif %}"
           style="padding-left: {{ level * 1.0 + 0.75 }}rem"
           title="{{ p.title | default(value=p.slug) }}">
+          {% if p.draft %}
+          <span class="inline-flex items-center px-1 py-0.2 text-[10px] font-medium bg-amber-100 text-amber-800 border border-amber-300 rounded mr-1 select-none">草稿</span>
+          {% endif %}
           {{ loop.index }}. {{ p.title | default(value=p.slug) }}
         </a>
         {% endfor %}
@@ -101,17 +104,17 @@
   <article class="min-w-0 prose prose-slate max-w-none mx-auto px-4 py-8 sm:px-6 lg:px-8">
     <div class="px-4 py-8 sm:px-6 lg:px-8">
       <nav class="breadcrumb not-prose text-sm text-gray-500 mb-4">
-        <a href="/columns/" class="hover:text-primary-600 transition-colors">专栏</a>
+        <a href="/{{ site.taxonomies.dirs.columns | default(value='columns') }}/" class="hover:text-primary-600 transition-colors">专栏</a>
         <span class="text-gray-300 mx-1">/</span>
-        <a href="/columns/{{ page.categories[1] }}/" class="hover:text-primary-600 transition-colors">{{ book_name | default(value="专栏") }}</a>
+        <a href="/{{ site.taxonomies.dirs.columns | default(value='columns') }}/{{ page.categories[1] }}/" class="hover:text-primary-600 transition-colors">{{ book_name | default(value="专栏") }}</a>
       </nav>
 
       <header class="mb-4 border-b border-gray-200 pb-4 not-prose">
-        <h1 class="text-3xl font-extrabold text-gray-900 tracking-tight mb-2 flex items-center flex-wrap gap-2">
-          <span>{{ page.title }}</span>
+        <h1 class="text-3xl font-extrabold text-gray-900 tracking-tight mb-2">
           {% if page.draft %}
-          <span class="inline-flex items-center px-2.5 py-0.5 text-xs font-semibold bg-amber-100 text-amber-800 border border-amber-300 rounded">草稿</span>
+          <span class="inline-flex items-center px-2 py-0.5 text-sm font-medium bg-amber-100 text-amber-800 border border-amber-300 rounded mr-2 align-middle select-none">草稿</span>
           {% endif %}
+          {{ page.title }}
         </h1>
         {% if page.date_ymd %}
         <p class="text-sm text-gray-500">更新于 {{ page.date_ymd }}</p>
@@ -123,7 +126,7 @@
       </div>
 
       <!-- 版权信息 -->
-      <div class="text-xs text-gray-500 not-prose" style="margin-top: 120px;">
+      <div class="mt-8 text-xs text-gray-500 not-prose">
         <p>本文链接：<a href="{{ site.domain }}{{ page.url }}" class="text-primary-600 hover:underline" target="_blank" rel="noopener">{{ site.domain }}{{ page.url }}</a></p>
         <p class="mt-1">共享许可：署名-非商业性 4.0 国际 (CC-BY-NC-4.0) <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener" class="text-primary-600 hover:underline">查看许可说明</a></p>
       </div>

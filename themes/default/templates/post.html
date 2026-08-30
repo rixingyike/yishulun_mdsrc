@@ -59,7 +59,7 @@
                     {% if not loop.first %}
                     <span class="text-gray-300">/</span>
                     {% endif %}
-                    <a href="/{{ page.categories | slice(end=loop.index) | join(sep='/') }}/"
+                    <a href="{% if site.taxonomies.categories and site.taxonomies.categories != '/' %}{{ site.taxonomies.categories }}{% endif %}/{{ page.categories | slice(end=loop.index) | join(sep='/') }}/"
                         class="hover:text-primary-600">{{ category }}</a>
                     {% endfor %}
                 </nav>
@@ -67,11 +67,11 @@
 
                 <!-- 文章头部 -->
                 <header class="mb-8">
-                    <h1 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-gray-900 mb-3 leading-tight flex items-center flex-wrap gap-2">
-                        <span>{{ page.title | default(value=page.slug) }}</span>
+                    <h1 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-gray-900 mb-3 leading-tight">
                         {% if page.draft %}
-                        <span class="inline-flex items-center px-2.5 py-0.5 text-xs font-semibold bg-amber-100 text-amber-800 border border-amber-300 rounded">草稿</span>
+                        <span class="inline-flex items-center px-2 py-0.5 text-xs sm:text-sm font-medium bg-amber-100 text-amber-800 border border-amber-300 rounded mr-2 align-middle select-none">草稿</span>
                         {% endif %}
+                        {{ page.title | default(value=page.slug) }}
                     </h1>
 
                     <div class="article-meta mb-3">
@@ -193,7 +193,7 @@
                 {% if page.tags %}
                 <div class="flex flex-wrap gap-x-4 gap-y-2 mt-6">
                     {% for tag in page.tags %}
-                    <a href="/tags/{{ tag }}/" class="text-sm text-gray-500 hover:text-primary-600 transition-colors">
+                    <a href="{{ site.taxonomies.tags | default(value='/tags') }}/{{ tag }}/" class="text-sm text-gray-500 hover:text-primary-600 transition-colors">
                         #{{ tag }}
                     </a>
                     {% endfor %}
@@ -201,7 +201,7 @@
                 {% endif %}
 
                 <!-- 版权信息 -->
-                <div class="text-xs text-gray-500" style="margin-top: 120px;">
+                <div class="mt-8 text-xs text-gray-500">
                     <p>
                         本文链接：
                         <a href="{{ site.domain }}{{ page.url }}" class="text-primary-600 hover:underline"

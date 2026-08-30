@@ -68,7 +68,12 @@ def get_system_font(size: int, bold: bool = True):
             "/System/Library/Fonts/STHeiti Medium.ttc",
             "/System/Library/Fonts/STHeiti Light.ttc",
             "/Library/Fonts/Songti.ttc",
+            "/usr/share/fonts/truetype/wqy/wqy-microhei.ttc",
+            "/usr/share/fonts/truetype/wqy/wqy-zenhei.ttc",
+            "/usr/share/fonts/opentype/noto/NotoSansCJK-Bold.ttc",
             "/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc",
+            "/usr/share/fonts/truetype/noto/NotoSansCJK-Bold.ttc",
+            "/usr/share/fonts/truetype/noto/NotoSansCJK-Regular.ttc",
             "/Library/Fonts/Arial Unicode.ttf",
         ]
     else:
@@ -76,7 +81,10 @@ def get_system_font(size: int, bold: bool = True):
             "/System/Library/Fonts/STHeiti Light.ttc",
             "/System/Library/Fonts/PingFang.ttc",
             "/Library/Fonts/Songti.ttc",
+            "/usr/share/fonts/truetype/wqy/wqy-microhei.ttc",
+            "/usr/share/fonts/truetype/wqy/wqy-zenhei.ttc",
             "/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc",
+            "/usr/share/fonts/truetype/noto/NotoSansCJK-Regular.ttc",
             "/Library/Fonts/Arial Unicode.ttf",
         ]
 
@@ -242,7 +250,7 @@ def draw_cover_image(
 
 
 def find_column_dirs(target_path: str, repo_root: str = None):
-    """寻找专栏目录列表（支持专栏编号、相对路径及绝对路径）"""
+    """寻找专栏目录列表（支持专栏编号、相对路径、绝对路径及智能模糊/别名匹配）"""
     candidates = [target_path]
     if repo_root:
         candidates.append(os.path.join(repo_root, target_path))
@@ -255,6 +263,34 @@ def find_column_dirs(target_path: str, repo_root: str = None):
         if os.path.exists(abs_p):
             resolved_path = abs_p
             break
+
+    # 若未直接找到，尝试在 source/columns 下进行智能模糊与元数据匹配
+    if not resolved_path and repo_root:
+        columns_root = os.path.join(repo_root, "source", "columns")
+        if os.path.exists(columns_root):
+            target_clean = target_path.strip().lower().replace("-", "").replace("_", "")
+            for item in os.listdir(columns_root):
+                sub_p = os.path.join(columns_root, item)
+                if not os.path.isdir(sub_p) or item.startswith('.'):
+                    continue
+                item_clean = item.lower().replace("-", "").replace("_", "")
+                
+                # 1. 目录名容错匹配 (例如 rustpress 与 rustpess)
+                if target_clean in item_clean or item_clean in target_clean:
+                    resolved_path = sub_p
+                    break
+                
+                # 2. README.md 元数据深度匹配 (title / product_id / tags)
+                readme_file = os.path.join(sub_p, "README.md")
+                if os.path.exists(readme_file):
+                    try:
+                        with open(readme_file, "r", encoding="utf-8") as f:
+                            c = f.read()
+                        if target_clean in c.lower().replace("-", "").replace("_", ""):
+                            resolved_path = sub_p
+                            break
+                    except Exception:
+                        pass
 
     if not resolved_path:
         return []

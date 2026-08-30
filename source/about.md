@@ -29,11 +29,11 @@ comments: false
 - 2019年08月，获腾讯云「[腾讯云最具价值专家（TVP）](https://cloud.tencent.com/tvp/member/124)」荣誉奖项
 - 2011年10月，被评为「Adobe 中国最佳贡献社区管理员」15位之一
 
-## 公益活动
+## 社会公益
 
-2015年05月为北医三院白血病人捐款 65577 元
+2015年05月为北医三院白血病人捐款 65577 元。
 
-<img src="/static/images/gongyi.jpg" alt="活动见证" style="zoom: 20%;" />
+<img src="assets/gongyi.HKQDVpja.jpg" alt="活动见证" style="zoom: 20%;" />
 
 ## 技术栈
 
@@ -53,7 +53,7 @@ comments: false
 * ✍️ 创作： 小说创作，专栏撰写
 * 🚵 运动： 徒步，骑行
 
-<img src="/static/images/qiche.jpg" alt="骑行" style="zoom: 25%;" />
+<img src="assets/qiche.jpg" alt="骑行" style="zoom: 25%;" />
 
 ## 联系
 
