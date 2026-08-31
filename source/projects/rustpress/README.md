@@ -20,6 +20,10 @@ comments: false
 toc: false
 ---
 
+# RustPress
+
+最新版本：<a href="https://crates.io/crates/rustpress"><img src="https://img.shields.io/crates/v/rustpress.svg?style=flat-square" alt="Crates.io"></a>
+
 ## 功能特性
 
 - 🚀 **纯静态生成** — 零后端依赖，生成纯 HTML/CSS/JS 静态站点
