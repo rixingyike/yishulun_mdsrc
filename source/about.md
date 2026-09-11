@@ -15,15 +15,14 @@ comments: false
 
 <img src="assets/qiche.jpg" alt="骑行" style="zoom: 25%;" />
 
-## 出版著作 & 在线课程
+## 出版物 & 在线课程
 
-* 2023年02月，在机械工业出版社出版[《微信小游戏开发》](https://item.jd.com/13630053.html)上下两册
-* 2017年12月，在机工出版[《小程序从0到1》](https://e.jd.com/30401467.html)
-
+- 2023年02月，在机械工业出版社出版[《微信小游戏开发》](https://item.jd.com/13630053.html)上下两册
+- 2017年12月，在机工出版[《小程序从0到1》](https://e.jd.com/30401467.html)
 - 2022年04月，在微信学堂上架[《小程序性能优化实践》](https://developers.weixin.qq.com/community/business/course/000606628dc2e86dc0ddcbb115940d)视频课程
 - 2020年05月，在极客时间上架[《微信小程序全栈开发实战》](http://gk.link/a/10AdC)视频课程
 
-## 荣誉奖项
+## 荣誉与奖项
 
 * 2024年04月，被授予「极客时间荣誉讲师」称号
 * 2023年01月，被授予「中移联合智库 ICT 专家级讲师」称号
