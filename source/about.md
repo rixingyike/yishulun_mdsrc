@@ -5,29 +5,32 @@ layout: about
 toc: false
 comments: false
 ---
+# 个人简介
 
-# 简介
+我是一个靠自学学会编程的文艺爱好者。我做过许多项目，用过包括 Rust、Go、Python、AS/JS、Node.js、C/C++、C# 在内的许多语言。我从不忌惮学习任何语言，语言就像机械师手中的工具，需要用哪个拿哪个便是。我坚信任何人都可以轻松学会编程，也应该学会编程，尤其在今天这个有 AI 辅助的时代。
 
-大学计算机讲师。微信学堂[《小程序性能优化实践》](https://developers.weixin.qq.com/community/business/course/000606628dc2e86dc0ddcbb115940d)专题讲师、极客时间[《微信小程序全栈开发实战》](http://gk.link/a/10AdC)课程讲师，国企一汽大众等企业内训讲师。著有[《微信小游戏开发》](https://item.jd.com/13630053.html)两册、[《小程序从0到1》](https://e.jd.com/30401467.html)等计算机畅销图书。是[腾讯云最具价值专家（TVP）](https://cloud.tencent.com/tvp/member/124)、腾讯课堂年度最具影响力专家、中移联合智库 ICT 专家级讲师、极客时间荣誉讲师等。
+早年我是 Adobe 中国最佳贡献社区管理员之一，后来获得腾讯云最具价值专家（TVP）、极客时间荣誉讲师、中移联合智库 ICT 专家级讲师等荣誉奖项。我曾担任大学计算机讲师与国内大型企业内训讲师，出版过《微信小游戏开发》《小程序从0到1》等计算机图书，并在极客时间与微信学堂上线过多门系统级结构化课程。
 
-## 出版
+代码之外，我沉迷于金石篆刻与书法，喜欢烹饪与骑行，富有一定的社会洞察力与社会责任感，曾于 2015 年以个人身份自发为北医三院白血病患者筹集并捐助 65,577 元善款。我是一个内向寡言的人，但也喜欢结交慎思笃行、真诚纯粹的朋友。欢迎与我连接。
 
-- 2023年02月，在机械工业出版社出版[《微信小游戏开发》](https://item.jd.com/13630053.html)上下两册
-- 2017年12月，在机工出版[《小程序从0到1》](https://e.jd.com/30401467.html)
+<img src="assets/qiche.jpg" alt="骑行" style="zoom: 25%;" />
 
-## 在线课程
+## 出版著作 & 在线课程
+
+* 2023年02月，在机械工业出版社出版[《微信小游戏开发》](https://item.jd.com/13630053.html)上下两册
+* 2017年12月，在机工出版[《小程序从0到1》](https://e.jd.com/30401467.html)
 
 - 2022年04月，在微信学堂上架[《小程序性能优化实践》](https://developers.weixin.qq.com/community/business/course/000606628dc2e86dc0ddcbb115940d)视频课程
 - 2020年05月，在极客时间上架[《微信小程序全栈开发实战》](http://gk.link/a/10AdC)视频课程
 
-## 奖项
+## 荣誉奖项
 
-- 2024年04月，被授予「极客时间荣誉讲师」称号
-- 2023年01月，被授予「中移联合智库 ICT 专家级讲师」称号
-- 2021年07月，获腾讯课堂「2021年度最具影响力专家」荣誉奖项
-- 2019年10月，获得「VIPKID 黑马大赛好技术金点子」一等奖
-- 2019年08月，获腾讯云「[腾讯云最具价值专家（TVP）](https://cloud.tencent.com/tvp/member/124)」荣誉奖项
-- 2011年10月，被评为「Adobe 中国最佳贡献社区管理员」15位之一
+* 2024年04月，被授予「极客时间荣誉讲师」称号
+* 2023年01月，被授予「中移联合智库 ICT 专家级讲师」称号
+* 2021年07月，获腾讯课堂「2021年度最具影响力专家」荣誉奖项
+* 2019年10月，获得「VIPKID 黑马大赛好技术金点子」一等奖
+* 2019年08月，获腾讯云「[腾讯云最具价值专家（TVP）](https://cloud.tencent.com/tvp/member/124)」荣誉奖项
+* 2011年10月，被评为「Adobe 中国最佳贡献社区管理员」15位之一
 
 ## 社会公益
 
@@ -35,31 +38,9 @@ comments: false
 
 <img src="assets/gongyi.HKQDVpja.jpg" alt="活动见证" style="zoom: 20%;" />
 
-## 技术栈
+## 联系方式
 
-* ⚙️ 后端： Rust, Go, Python, Node.js, ASP, Python, Linux
-* 🖥️ 前端与客户端： JavaScript/TypeScript, Vue.js/React, Tauri, 浏览器扩展, 微信小程序, 微信小游戏, AS3, Flex, Flash
-* 🗄️ 数据与基础设施： SQLite, MySQL, Redis, Colima (Docker), Cloudflare
-* 🤖 AI CLI： agy, opencode, claude code
-* ⌨️ 编码工具： Zed, Kitty, Git, CC Switch
-* 🛠️ 效能工具： Tabbit, Maccy, PixPin, scrcpy, LocalSend, IINA
-* 🚀 写作： RustPress、PushPen
+* 邮箱：<9830131@qq.com>
+* 微信：[9830131](https://x.com/jinshimanong)
 
-## 兴趣
-
-* 🍳 生活： 烹饪，购物
-* 🎵 艺术： 箫，篆刻，书法
-* 📖 阅读： 奇趣杂书，历史书与小说
-* ✍️ 创作： 小说创作，专栏撰写
-* 🚵 运动： 徒步，骑行
-
-<img src="assets/qiche.jpg" alt="骑行" style="zoom: 25%;" />
-
-## 联系
-
-欢迎来信交流。如果你对我的文章有任何问题或建议，或者想要交流技术话题，欢迎通过以下方式联系我：
-
-- 邮箱：9830131@qq.com
-- X：https://x.com/jinshimanong
-
-感谢访问！
+欢迎连接。
