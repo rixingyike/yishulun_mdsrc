@@ -1,39 +1,35 @@
 ---
 title: 恩言 - 大字有声圣经
 layout: project
-version: 1.0.0
+version: 1.1.0
 description: 一款大字有声圣经朗读应用，支持新约旧约全书、繁体中文显示、离线语音朗读，适配 macOS 与 Android 多平台。
 createTime: 2026-02-19 14:00:00
 icon: assets/icon.png
 screenshots:
-  - assets/screenshot1.png
-  - assets/screenshot2.png
-  - assets/screenshot3.png
-  - assets/screenshot4.png
-  - assets/screenshot5.png
-  - assets/screenshot6.png
+  - assets/screenshot1.jpg
+  - assets/screenshot2.jpg
+  - assets/screenshot3.jpg
+  - assets/screenshot4.jpg
+  - assets/screenshot5.jpg
+  - assets/screenshot6.jpg
 downloads:
   - platform: macOS (Apple Silicon)
-    url: https://gitee.com/rxyk/enyan/releases/download/v1.0.0/enyan-macos-arm64.app.zip
+    url: https://gitee.com/rxyk/enyan/releases/download/v1.1.0/enyan-macos-arm64.app.zip
     icon: apple
     size: M1/M2/M3 芯片 Mac
   - platform: macOS (Intel)
-    url: https://gitee.com/rxyk/enyan/releases/download/v1.0.0/enyan-macos-x64.app.zip
+    url: https://gitee.com/rxyk/enyan/releases/download/v1.1.0/enyan-macos-x64.app.zip
     icon: apple
     size: Intel 芯片 Mac
   - platform: Android (ARM64)
-    url: https://gitee.com/rxyk/enyan/releases/download/v1.0.0/enyan-android-arm64.apk
+    url: https://gitee.com/rxyk/enyan/releases/download/v1.1.0/enyan-android-arm64.apk
     icon: android
     size: 主流现代安卓手机
   - platform: Android (ARMv7)
-    url: https://gitee.com/rxyk/enyan/releases/download/v1.0.0/enyan-android-armv7.apk
+    url: https://gitee.com/rxyk/enyan/releases/download/v1.1.0/enyan-android-armv7.apk
     icon: android
     size: 老旧安卓手机
-  - platform: Android (x64)
-    url: https://gitee.com/rxyk/enyan/releases/download/v1.0.0/enyan-android-x64.apk
-    icon: android
-    size: 电脑模拟器 / Chromebook
-tags: [app, flutter, rust, tts, 圣经]
+tags: [flutter, rust, 圣经]
 comments: false
 toc: false
 ---
@@ -41,6 +37,13 @@ toc: false
 # 恩言（大字有声圣经）
 
 开源仓库：https://github.com/rixingyike/enyan
+
+## v1.1.0 功能更新
+
+- 全屏化、扁平化风格全面改版。
+- 修复真人朗读文本不同步的问题。
+- 支持系统后台播放。
+- 修复和合本简体版中 489 个问号。
 
 ## 功能特性
 
