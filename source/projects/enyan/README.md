@@ -1,7 +1,7 @@
 ---
 title: 恩言 - 大字有声圣经
 layout: project
-version: 1.1.0
+version: 1.2.0
 description: 一款大字有声圣经朗读应用，支持新约旧约全书、繁体中文显示、离线语音朗读，适配 macOS 与 Android 多平台。
 createTime: 2026-02-19 14:00:00
 icon: assets/icon.png
@@ -14,11 +14,11 @@ screenshots:
   - assets/screenshot6.jpg
 downloads:
   - platform: macOS (Apple Silicon)
-    url: https://gitee.com/rxyk/enyan/releases/download/v1.1.0/enyan-macos-arm64.app.zip
+    url: https://gitee.com/rxyk/enyan/releases/download/v1.1.0/enyan-macos-arm64.zip
     icon: apple
     size: M1/M2/M3 芯片 Mac
   - platform: macOS (Intel)
-    url: https://gitee.com/rxyk/enyan/releases/download/v1.1.0/enyan-macos-x64.app.zip
+    url: https://gitee.com/rxyk/enyan/releases/download/v1.1.0/enyan-macos-x64.zip
     icon: apple
     size: Intel 芯片 Mac
   - platform: Android (ARM64)
@@ -37,6 +37,12 @@ toc: false
 # 恩言（大字有声圣经）
 
 开源仓库：https://github.com/rixingyike/enyan
+
+## v1.2.0 功能更新
+
+- 在主页和章播放页同时添加章列表。
+- Wifi 网络下真人语音包下载引导。
+- 添加软件自更新功能（在 Wifi 网络下）。
 
 ## v1.1.0 功能更新
 
@@ -73,4 +79,3 @@ toc: false
 | 8kHz 语音包 | 高质量语音朗读（推荐） |
 
 > 本 App 开源免费，不下载语音资源包也可正常使用 App 的默认内容。
-
