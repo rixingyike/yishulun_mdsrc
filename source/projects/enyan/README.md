@@ -22,6 +22,10 @@ downloads:
     url: https://gitee.com/rxyk/enyan/releases/download/v1.3.0/enyan-macos-x64.zip
     icon: apple
     size: Intel 芯片 Mac
+  - platform: macOS
+    url: https://gitee.com/rxyk/enyan/releases/download/v1.3.0/enyan-macos-universal.zip
+    icon: apple
+    size: 通用 macOS 版本
   - platform: Android (ARM64)
     url: https://gitee.com/rxyk/enyan/releases/download/v1.3.0/enyan-android-arm64.apk
     icon: android
